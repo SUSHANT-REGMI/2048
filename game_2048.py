@@ -26,8 +26,8 @@ class Game(tkinter.Frame):
         self.master.title('2048')
 
         self.main_grid = tkinter.Frame(
-            self, bg=c.GRID_COLOR, bd=3, width=400, height=400)
-        self.main_grid.grid(pady=(80, 0))
+            self, bg=c.GRID_COLOR, bd=3, width=400, height=500)
+        self.main_grid.grid(pady=(85, 0))
         self.make_GUI()
         self.start_game()
 
@@ -45,8 +45,8 @@ class Game(tkinter.Frame):
                 cell_frame = tkinter.Frame(
                     self.main_grid,
                     bg=c.EMPTY_CELL_COLOR,
-                    width=100,
-                    height=100)
+                    width=110,
+                    height=110)
                 cell_frame.grid(row=i, column=j, padx=5, pady=5)
                 cell_number = tkinter.Label(
                     self.main_grid, bg=c.EMPTY_CELL_COLOR)
@@ -57,7 +57,7 @@ class Game(tkinter.Frame):
 
         # make score header
         score_frame = tkinter.Frame(self)
-        score_frame.place(relx=0.5, y=35, anchor="center")
+        score_frame.place(relx=0.5, y=37, anchor="center")
         tkinter.Label(
             score_frame,
             text="Score",

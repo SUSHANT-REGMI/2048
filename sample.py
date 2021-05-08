@@ -10,7 +10,7 @@ class mainwindow():
     def mainpage(self):
         bg = ImageTk.PhotoImage(Image.open("welcome.png"))
 
-        my_canvas = Canvas(root, width=700, height=595)
+        my_canvas = Canvas(root, width=700, height=550)
         my_canvas.grid()
 
         my_canvas.create_image(0, 0, image=bg, anchor=NW)
