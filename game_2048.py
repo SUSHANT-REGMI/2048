@@ -241,13 +241,5 @@ class Game(tkinter.Frame):
                 font=c.GAME_OVER_FONT).pack()
 
 
-# def main():
-#     top = Toplevel()
-#     mycanvas = Canvas(top)
-#     mycanvas.grid(Game())
-
-#     top.mainloop()
-
-
 if __name__ == "__main__":
     mains(root)
