@@ -7,6 +7,8 @@ import colors as c
 def mains(root):
     root.destroy()
     root = Tk()
+    root.iconbitmap('unnamed.ico')
+    root.title('2048')
 
     def init(root):
         l1.destroy()

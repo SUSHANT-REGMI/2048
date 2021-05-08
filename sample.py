@@ -10,13 +10,13 @@ class mainwindow():
     def mainpage(self):
         bg = ImageTk.PhotoImage(Image.open("welcome.png"))
 
-        my_canvas = Canvas(root, width=1200, height=1200)
+        my_canvas = Canvas(root, width=700, height=595)
         my_canvas.grid()
 
         my_canvas.create_image(0, 0, image=bg, anchor=NW)
 
         button1 = Button(root, text="New Game", fg="black", bg="#ddf0d0", padx=3,
-                         command=lambda: game_2048.main(),
+                         command=lambda: game_2048.mains(root),
                          pady=3, font=('Helvetica', '12', 'bold'), activebackground="#94d3c3",
                          )
         button2 = Button(root, text="AI Mode", fg="black", bg="#ddf0d0",
