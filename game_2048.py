@@ -4,26 +4,28 @@ import random
 import colors as c
 
 
-def mains(root):
+def main(root):
     root.destroy()
-    root = Tk()
-    root.iconbitmap('unnamed.ico')
-    root.title('2048')
+    root1 = Tk()
+    root1.iconbitmap('unnamed.ico')
+    root1.title('2048')
 
-    def init(root):
-        l1.destroy()
-        game = Game(root)
-        game.pack()
-
-    l1 = Button(root, text='Start Game?', command=lambda: init(root))
+    l1 = Button(root1, text='Start Game?', command=lambda: init(root1))
     l1.pack()
+
+    def init(root1):
+        l1.destroy()
+        game = Game(root1)
+        game.pack()
 
 
 class Game(tkinter.Frame):
-    def __init__(self, parent):
-        tkinter.Frame.__init__(self, parent)
-
+    def __init__(self, master):
+        # frame class needs a container, here 'master' acts as a container
+        tkinter.Frame.__init__(self, master)
+        # note: master is only used when calling a built-in function that is imported from the frame class
         self.master.title('2048')
+        self.master.geometry("495x575+440+60")
 
         self.main_grid = tkinter.Frame(
             self, bg=c.GRID_COLOR, bd=3, width=400, height=500)
@@ -241,5 +243,5 @@ class Game(tkinter.Frame):
                 font=c.GAME_OVER_FONT).pack()
 
 
-if __name__ == "__main__":
-    mains(root)
+# if __name__ == "__main__":
+#     main()

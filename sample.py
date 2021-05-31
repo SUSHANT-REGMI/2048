@@ -1,7 +1,9 @@
 from tkinter import *
+import tkinter as ttk
+
 from PIL import ImageTk, Image
 import game_2048
-root = Tk()
+root = ttk.Tk()
 root.iconbitmap('unnamed.ico')
 root.title('2048')
 
@@ -16,7 +18,7 @@ class mainwindow():
         my_canvas.create_image(0, 0, image=bg, anchor=NW)
 
         button1 = Button(root, text="New Game", fg="black", bg="#ddf0d0", padx=3,
-                         command=lambda: game_2048.mains(root),
+                         command=lambda: game_2048.main(root),
                          pady=3, font=('Helvetica', '12', 'bold'), activebackground="#94d3c3",
                          )
         button2 = Button(root, text="AI Mode", fg="black", bg="#ddf0d0",
