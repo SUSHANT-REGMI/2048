@@ -29,7 +29,7 @@ FactsTexts = my_canvas.create_text(
         'Comic Sans MS', '20', 'bold'))
 
 Facts_1 = my_canvas.create_text(
-    10, 450, anchor=NW, text="- The highest score ever to be recorded in 2048 is 73,000 points.", font=(
+    10, 450, anchor=NW, text="- The highest score ever to be recorded in 2048 is 73,548 points.", font=(
         'Comic Sans MS', '15'))
 
 Facts_2 = my_canvas.create_text(
