@@ -21,7 +21,7 @@ def main(root):
 
 class Game(tkinter.Frame):
     def __init__(self, master):
-        # frame class needs a container, here 'master' acts as a container
+        # frame class needs a container, here  'master' acts as a container
         tkinter.Frame.__init__(self, master)
         # note: master is only used when calling a built-in function that is imported from the frame class
         self.master.title('2048')
