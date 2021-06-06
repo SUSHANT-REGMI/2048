@@ -1,11 +1,12 @@
 from tkinter import Frame, Label, CENTER
-
+from tkinter import Tk
+import tkinter
 import game_ai
 import game_functions
 
 EDGE_LENGTH = 400
 CELL_COUNT = 4
-CELL_PAD = 10
+CELL_PAD = 5
 
 UP_KEY = "'w'"
 DOWN_KEY = "'s'"
@@ -14,26 +15,60 @@ RIGHT_KEY = "'d'"
 AI_KEY = "'q'"
 AI_PLAY_KEY = "'p'"
 
-LABEL_FONT = ("Verdana", 40, "bold")
+LABEL_FONT = ("Helvetica", 32, "bold")
 
-GAME_COLOR = "#a6bdbb"
+GAME_COLOR = "#a39489"
 
-EMPTY_COLOR = "#8eaba8"
+EMPTY_COLOR = "#c2b3a9"
 
-TILE_COLORS = {2: "#daeddf", 4: "#9ae3ae", 8: "#6ce68d", 16: "#42ed71",
-               32: "#17e650", 64: "#17c246", 128: "#149938",
-               256: "#107d2e", 512: "#0e6325", 1024: "#0b4a1c",
-                   2048: "#031f0a", 4096: "#000000", 8192: "#000000", }
+TILE_COLORS = {
+    2: "#fcefe6",
+    4: "#e6b04c",
+    8: "#f5b682",
+    16: "#f29446",
+    32: "#ff775c",
+    64: "#e64c2e",
+    128: "#ede291",
+    256: "#fce130",
+    512: "#ffdb4a",
+    1024: "#f0b922",
+    2048: "#fad74d",
+    4096: "#000000", 
+    8192: "#000000" 
+}
 
-LABEL_COLORS = {2: "#011c08", 4: "#011c08", 8: "#011c08", 16: "#011c08",
-                   32: "#011c08", 64: "#f2f2f0", 128: "#f2f2f0",
-                   256: "#f2f2f0", 512: "#f2f2f0", 1024: "#f2f2f0",
-                   2048: "#f2f2f0", 4096: "#f2f2f0", 8192: "#f2f2f0", }
+LABEL_COLORS = {
+    2: "#695c57",
+    4: "#695d57",
+    8: "#ffffff",
+    16: "#ffffff",
+    32: "#ffffff",
+    64: "#ffffff",
+    128: "#ffffff",
+    256: "#ffffff",
+    512: "#ffffff",
+    1024: "#ffffff",
+    2048: "#ffffff", 
+    4096: "#f2f2f0", 
+    8192: "#f2f2f0", }
 
+def main(root):
+    root.destroy()
+    root1 = Tk()
+    root1.iconbitmap('unnamed.ico')
+    root1.title('2048')
+
+    l1 = tkinter.Button(root1, text='Start Game?', command=lambda: init(root1))
+    l1.pack()
+
+    def init(root1):
+        l1.destroy()
+        game = Display(root1)
+        game.pack()
 
 class Display(Frame):
-    def __init__(self):
-        Frame.__init__(self)
+    def __init__(self, master):
+        Frame.__init__(self, master)
 
         self.grid()
         self.master.title('2048')
@@ -116,5 +151,5 @@ class Display(Frame):
                 self.draw_grid_cells()
                 move_made = False
 
-
-gamegrid = Display()
+if __name__ == "__main__":
+    gamegrid = Display()

@@ -113,3 +113,4 @@ def add_new_tile(board):
 
 def check_for_win(board):
     return 2048 in board
+    
