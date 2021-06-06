@@ -3,7 +3,10 @@ import tkinter as ttk
 
 from PIL import ImageTk, Image
 import game_2048
+<<<<<<< HEAD
 import game_display
+=======
+>>>>>>> e65333c07df2dea62d6a439308594f27f9b2ccd8
 root = ttk.Tk()
 root.iconbitmap('unnamed.ico')
 root.title('2048')
@@ -23,8 +26,12 @@ class mainwindow():
                          pady=3, font=('Helvetica', '12', 'bold'), activebackground="#94d3c3",
                          )
         button2 = Button(root, text="AI Mode", fg="black", bg="#ddf0d0",
+<<<<<<< HEAD
                          padx=3, command=lambda: game_display.main(root), 
                          pady=3, font=('Helveica', '12', 'bold'), activebackground="#94d3c3")
+=======
+                         padx=3, pady=3, font=('Helveica', '12', 'bold'), activebackground="#94d3c3")
+>>>>>>> e65333c07df2dea62d6a439308594f27f9b2ccd8
 
         button1_window = my_canvas.create_window(
             10, 10, anchor=NW, window=button1)
