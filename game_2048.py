@@ -7,7 +7,7 @@ import colors as c
 def main(root):
     root.destroy()
     root1 = Tk()
-    root1.iconbitmap('unnamed.ico')
+    root1.iconbitmap('2048.ico')
     root1.title('2048')
 
     l1 = Button(root1, text='Start Game?', command=lambda: init(root1))
@@ -24,11 +24,11 @@ class Game(tkinter.Frame):
         tkinter.Frame.__init__(self, master)
         # note: master is only used when calling a built-in function that is imported from the frame class
         self.master.title('2048')
-        self.master.geometry("495x575+440+60")
+        #self.master.geometry("495x575+440+60")
 
         self.main_grid = tkinter.Frame(
-            self, bg=c.GRID_COLOR, bd=3, width=400, height=500)
-        self.main_grid.grid(pady=(85, 0))
+            self, bg=c.GRID_COLOR, bd=3, width=800, height=600)
+        self.main_grid.grid(pady=(100, 0))
         self.make_GUI()
         self.start_game()
 
@@ -58,7 +58,7 @@ class Game(tkinter.Frame):
 
         # make score header
         score_frame = tkinter.Frame(self)
-        score_frame.place(relx=0.5, y=37, anchor="center")
+        score_frame.place(relx=0.5, y=48, anchor="center")
         tkinter.Label(
             score_frame,
             text="Score",

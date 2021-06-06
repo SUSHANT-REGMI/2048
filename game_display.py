@@ -55,7 +55,7 @@ LABEL_COLORS = {
 def main(root):
     root.destroy()
     root1 = Tk()
-    root1.iconbitmap('unnamed.ico')
+    root1.iconbitmap('2048.ico')
     root1.title('2048')
 
     l1 = tkinter.Button(root1, text='Start Game?', command=lambda: init(root1))
@@ -103,7 +103,7 @@ class Display(Frame):
                           pady=CELL_PAD)
                 t = Label(master=cell, text="",
                           bg=EMPTY_COLOR,
-                          justify=CENTER, font=LABEL_FONT, width=5, height=2)
+                          justify=CENTER, font=LABEL_FONT, width=4, height=2)
                 t.grid()
                 grid_row.append(t)
 
@@ -151,5 +151,5 @@ class Display(Frame):
                 self.draw_grid_cells()
                 move_made = False
 
-if __name__ == "__main__":
-    gamegrid = Display()
+# if __name__ == "__main__":
+#     gamegrid = Display()
