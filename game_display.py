@@ -45,11 +45,11 @@ LABEL_COLORS = {
     32: "#ffffff",
     64: "#ffffff",
     128: "#ffffff",
-    256: "#ffffff",
-    512: "#ffffff",
-    1024: "#ffffff",
-    2048: "#ffffff", 
-    4096: "#f2f2f0", 
+    256: "#fabcff",
+    512: "#ffacbf",
+    1024: "#fbbbff",
+    2048: "#ffbbfa", 
+    4096: "#f2f2a0", 
     8192: "#f2f2f0", }
 
 def main(root):
