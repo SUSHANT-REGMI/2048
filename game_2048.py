@@ -24,6 +24,8 @@ class Game(tkinter.Frame):
         tkinter.Frame.__init__(self, master)
         # note: master is only used when calling a built-in function that is imported from the frame class
         self.master.title('2048')
+        self.master.resizable(width=False, height=False)        
+        
         #self.master.geometry("495x575+440+60")
 
         self.main_grid = tkinter.Frame(

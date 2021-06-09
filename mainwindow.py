@@ -9,6 +9,7 @@ import game_display
 root = ttk.Tk()
 root.iconbitmap('2048.ico')
 root.title('2048')
+root.resizable(width=False, height=False)
 
 
 class mainwindow():

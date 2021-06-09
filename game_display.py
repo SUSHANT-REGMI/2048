@@ -72,6 +72,7 @@ class Display(Frame):
 
         self.grid()
         self.master.title('2048')
+        self.master.resizable(width=False, height=False)
         self.master.bind("<Key>", self.key_press)
 
         self.commands = {UP_KEY: game_functions.move_up,
