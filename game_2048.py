@@ -9,7 +9,6 @@ def main(root):
     root1 = Tk()
     root1.iconbitmap('2048.ico')
     root1.title('2048')
-
     l1 = Button(root1, text='Start Game?', command=lambda: init(root1))
     l1.pack()
 
@@ -26,7 +25,7 @@ class Game(tkinter.Frame):
         self.master.title('2048')
         self.master.resizable(width=False, height=False)        
         
-        #self.master.geometry("495x575+440+60")
+        self.master.geometry("495x590+440+60")
 
         self.main_grid = tkinter.Frame(
             self, bg=c.GRID_COLOR, bd=3, width=800, height=600)
@@ -72,7 +71,7 @@ class Game(tkinter.Frame):
 
     def start_game(self):
         # create matrix of zeroes
-        self.matrix = [[0] * 4 for _ in range(4)]
+        self.matrix = [[0]*4 for _ in range(4)]
 
         # fill 2 random cells with 2s
         row = random.randint(0, 3)
