@@ -55,7 +55,7 @@ LABEL_COLORS = {
 def main(root):
     root.destroy()
     root1 = Tk()
-    root1.iconbitmap('2048.ico')
+    root1.iconbitmap('images/2048.ico')
     root1.title('2048')
 
     l1 = tkinter.Button(root1, text='Start Game?', command=lambda: init(root1))

@@ -7,14 +7,14 @@ import game_2048
 import game_display
 
 root = ttk.Tk()
-root.iconbitmap('2048.ico')
+root.iconbitmap('images/2048.ico')
 root.title('2048')
 root.resizable(width=False, height=False)
 
 
 class mainwindow():
     def mainpage(self):
-        bg = ImageTk.PhotoImage(Image.open("welcome.png"))
+        bg = ImageTk.PhotoImage(Image.open("images/welcome.png"))
 
         my_canvas = Canvas(root, width=700, height=550)
         my_canvas.grid()
