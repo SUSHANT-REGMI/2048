@@ -13,7 +13,7 @@ root.resizable(width=False, height=False)
 
 
 class mainwindow():
-    def mainpage(self):
+    def __init__(self):
         bg = ImageTk.PhotoImage(Image.open("images/welcome.png"))
 
         my_canvas = Canvas(root, width=700, height=550)
@@ -53,4 +53,4 @@ class mainwindow():
 
 
 win1 = mainwindow()
-win1.mainpage()
+
