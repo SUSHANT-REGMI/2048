@@ -152,5 +152,3 @@ class Display(Frame):
                 self.draw_grid_cells()
                 move_made = False
 
-# if __name__ == "__main__":
-#     gamegrid = Display()
