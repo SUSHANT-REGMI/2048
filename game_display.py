@@ -3,7 +3,7 @@ from tkinter import Tk
 import tkinter
 import game_ai
 import game_functions
-
+import keyboard
 EDGE_LENGTH = 400
 CELL_COUNT = 4
 CELL_PAD = 5
@@ -53,12 +53,13 @@ LABEL_COLORS = {
     8192: "#f2f2f0", }
 
 def main(root):
+    
     root.destroy()
     root1 = Tk()
     root1.iconbitmap('images/2048.ico')
     root1.title('2048')
-
-    l1 = tkinter.Button(root1, text='Start Game?', command=lambda: init(root1))
+    
+    l1 = tkinter.Button(root1, text='Start Game?', command = lambda:init(root1))
     l1.pack()
 
     def init(root1):
@@ -136,7 +137,9 @@ class Display(Frame):
                 if valid_game:
                     self.matrix = game_functions.add_new_tile(self.matrix)
                     self.draw_grid_cells()
-                move_count += 1
+            move_count += 1
+                    
+
         if key == AI_KEY:
             self.matrix, move_made = game_ai.ai_move(self.matrix, 20, 30)
             if move_made:

@@ -35,19 +35,19 @@ class mainwindow():
             120, 10, anchor=NW, window=button2)
 
         FactsTexts = my_canvas.create_text(
-            10, 400, anchor=NW, text="Fun Facts About 2048", font=(
+            10, 350, anchor=NW, text="How to play the game", font=(
                 'Comic Sans MS', '20', 'bold'))
 
         Facts_1 = my_canvas.create_text(
-            10, 450, anchor=NW, text="- The highest score ever to be recorded in 2048 is 73,000 points.", font=(
+            10, 400, anchor=NW, text="- For New Game Mode:\n  Use left, right, up and down arrow key for respective moves.", font=(
                 'Comic Sans MS', '15'))
 
-        Facts_2 = my_canvas.create_text(
-            10, 480, anchor=NW, text="- 2048 is open source, meaning it can be edited and used by anyone.", font=(
-                'Comic Sans MS', '15'))
-
+        
         Facts_3 = my_canvas.create_text(
-            10, 510, anchor=NW, text="- 2048 received more that 4 million hits within a week of its launch.", font=(
+            10, 460, anchor=NW, text="- For AI mode:\n  Use 'a','s','d','w' for left, down, right up,", font=(
+                'Comic Sans MS', '15'))
+        Facts_4 = my_canvas.create_text(
+            10, 513, anchor=NW, text="  'p' for Full AI mode & 'q' for Hint.", font=(
                 'Comic Sans MS', '15'))
         root.mainloop()
 

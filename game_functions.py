@@ -14,7 +14,7 @@ def initialize_game():
     board = board.reshape((CELL_COUNT, CELL_COUNT))
     return board
 
-
+ 
 def push_board_right(board):
     new = np.zeros((CELL_COUNT, CELL_COUNT), dtype="int")
     done = False
