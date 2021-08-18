@@ -243,5 +243,5 @@ class Game(tkinter.Frame):
                 font=c.GAME_OVER_FONT).pack()
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
